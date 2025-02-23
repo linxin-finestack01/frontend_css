@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  padding-top: 200px;
+  background-color: #222;
+}
+.container .tabs {
+  margin: 0 auto;
+  position: relative;
+  padding: 35px 0;
+}
+.container .tabs .content {
+  border-radius: 20px;
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background-color: aqua;
+  left: 80px;
+  top: 0;
+}
+.container .tabs .content h2 {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+}
+.container .tabs input {
+  display: none;
+}
+.container .tabs input:nth-child(1):checked ~ .icon .lbg {
+  top: 0%;
+}
+.container .tabs input:nth-child(1):checked ~ .content h2:nth-child(1) {
+  opacity: 1;
+}
+.container .tabs input:nth-child(2):checked ~ .icon .lbg {
+  top: 25%;
+}
+.container .tabs input:nth-child(2):checked ~ .content h2:nth-child(2) {
+  opacity: 1;
+}
+.container .tabs input:nth-child(3):checked ~ .icon .lbg {
+  top: 50%;
+}
+.container .tabs input:nth-child(3):checked ~ .content h2:nth-child(3) {
+  opacity: 1;
+}
+.container .tabs input:nth-child(4):checked ~ .icon .lbg {
+  top: 75%;
+}
+.container .tabs input:nth-child(4):checked ~ .content h2:nth-child(4) {
+  opacity: 1;
+}
+.container .tabs .icon {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .tabs .icon label {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  z-index: 2;
+  text-align: center;
+}
+.container .tabs .icon .lbg {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background: aqua;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.container .tabs .icon .lbg::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  box-shadow: 10px 10px 0px 8px aqua;
+  border-bottom-right-radius: 30px;
+  top: -20px;
+  right: 0;
+  content: "";
+}
+.container .tabs .icon .lbg::after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  box-shadow: 10px -10px 0px 8px aqua;
+  border-top-right-radius: 30px;
+  bottom: -20px;
+  right: 0;
+  content: "";
+}/*# sourceMappingURL=main.css.map */
